@@ -1,0 +1,301 @@
+ /*Media query*/ 
+@media (max-width: 700px){
+    .alma {
+        display: flex;
+        flex-direction: column;
+      }
+      #navbar{
+          display: flex;
+          flex-direction: column;
+          .navbar-nav {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+          .navbar-collapse {
+              a {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  img {
+                      margin-left: 0;
+                      margin-top: 10px;
+                  }
+              }
+          }
+      }
+      .body{
+        display: flex;
+        flex-direction: row;
+        background-image: url(../img/fondo.jpg);
+        
+      }
+      .tresColumnas{
+        display: flex;
+        flex-direction: column;
+        background-color: #97b557;
+      }
+      .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #132408;
+        background-image: none;
+      }
+      .footer-columna {
+          display: flex;
+          flex-direction: column;
+          h4 {
+              font-size: 1.5rem;
+          }
+          label {
+              font-size: 1rem;
+          }
+          li {
+              font-size: 1rem;
+          }
+          &:hover {
+              color: #ccc;
+          }
+      }
+      .foot {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .obras {
+          display: flex;
+          flex-direction: column;
+          .foto img{
+              width: 100%;
+          }
+      }
+      .servicios {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+      }
+      .servicios__metodologia {
+          display: flex;
+          flex-direction: column;
+          background-color: #ddffbc;
+      }
+      .carrusel {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .carousel-item{
+          width: auto;
+      }
+      .nosotros {
+          display: flex;
+          flex-direction: column;
+      }
+      .nosotros__idiologia {
+          display: flex;
+          flex-direction: column;
+      }
+  }
+  @media (max-width: 768px){
+    .alma {
+      display: flex;
+      flex-direction: column;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        .navbar-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar-collapse {
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .body{
+      display: flex;
+      flex-direction: row;
+      background-image: url(../img/fondo.jpg);
+      
+    }
+    .tresColumnas{
+      display: flex;
+      flex-direction: column;
+      background-color: #97b557;
+    }
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url(../img/fondo.jpg);
+      background-size: auto;
+    }
+    .footer-columna {
+        display: flex;
+        flex-direction: column;
+        h4 {
+            font-size: 1.5rem;
+        }
+        label {
+            font-size: 1rem;
+        }
+        li {
+            font-size: 1rem;
+        }
+        &:hover {
+            color: #ccc;
+        }
+    }
+    .foot {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .obras {
+        display: flex;
+        flex-direction: column;
+        .foto img{
+            width: 100%;
+        }
+    }
+    .servicios {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .servicios__metodologia {
+        display: flex;
+        flex-direction: column;
+        background-color: #ddffbc;
+    }
+    .carrusel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .carousel-item{
+        width: auto;
+    }
+    .nosotros {
+        display: flex;
+        flex-direction: column;
+    }
+    .nosotros__idiologia {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+   @media (max-width: 1050px){
+    .alma {
+        display: flex;
+        flex-direction: column;
+      }
+      #navbar{
+          display: flex;
+          flex-direction: column;
+          .navbar-nav {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+          .navbar-collapse {
+              a {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  img {
+                      margin-left: 0;
+                      margin-top: 10px;
+                  }
+              }
+          }
+      }
+      .body{
+        display: flex;
+        flex-direction: row;
+        background-image: url(../img/fondo.jpg);
+        
+      }
+      .tresColumnas{
+        display: flex;
+        flex-direction: column;
+        background-color: #97b557;
+      }
+      .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(../img/fondo.jpg);
+      }
+      .footer-columna {
+          display: flex;
+          flex-direction: column;
+          h4 {
+              font-size: 1.5rem;
+          }
+          label {
+              font-size: 1rem;
+          }
+          li {
+              font-size: 1rem;
+          }
+          &:hover {
+              color: #ccc;
+          }
+      }
+      .foot {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .obras {
+          display: flex;
+          flex-direction: column;
+          .foto img{
+              width: 100%;
+          }
+      }
+      .servicios {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+      }
+      .servicios__metodologia {
+          display: flex;
+          flex-direction: column;
+          background-color: #ddffbc;
+      }
+      .servicio__metodologia--color {
+        width: 100%;
+      }
+      .carrusel {
+          display: none;
+          
+      }
+      .contact {
+          display: flex;
+          flex-direction: column;
+          margin: 5px;
+      }
+      .nosotros {
+          display: flex;
+          flex-direction: column;
+      }
+      .nosotros__idiologia {
+          display: flex;
+          flex-direction: column;
+      }
+  }
