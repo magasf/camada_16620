@@ -11,3 +11,11 @@
     color: #5c5c5c;
     text-shadow: 1px 1px 1px black;
 }
+@mixin columna {
+    display: flex;
+    flex-direction: column;
+}
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}

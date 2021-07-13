@@ -10,6 +10,7 @@
 .alma {
   background-color: $color-wall;
 }
+
 #letra {
   font-family: $main-tapeface;
   text-shadow: $text-shadow;
@@ -17,6 +18,7 @@
   font-size: 2.5rem;
   letter-spacing: 2px;
 }
+
 .letras {
   font-family: $main-tapeface;
   letter-spacing: 2px;
@@ -27,38 +29,40 @@
   }
   font-size: 25px;
 }
+
 #navbar {
   background-image: url("../img/fondo.jpg");
   background-size: contain;
 }
+
 #logo {
   margin: $tamaño;
   margin-left: ($tamaño)*4;
 }
+
 .ico {
   color: #ccc;
   padding: 5px;
   margin: 5px;
   &:hover {
     color: #ccc;
-}
-
+  }
 }
 .footer {
-  background-color: #91c788;
-  background-image: url("../img/fondo19.jpg");
+  background-color: $color-dark;
+  /*background-image: url("../img/fondofooter3.jpg");*/
   padding: ($tamaño)*4;
-  background-size: auto;
+  background-size: contain;
   background-position: 50% bottom;
-  color: white;
-  display: flex;
-  flex-direction: row;
+  color: #fff;
+  @include row;
   justify-content: space-around;
   align-items: center;
   font-size: 1.5rem;
   font-family: $main-tapeface;
-  
+  border-top: $color-dark solid;
 }
+
 .footer-columna {
   margin-left: ($tamaño)*2;
   padding: 15px;
@@ -67,23 +71,7 @@
 .footer-columna-size{
   font-size: 2rem;
 }
-.foot {
-    display: flex;
-    list-style: none; 
-    list-style-position: center;
-    justify-content: space-between;
-    color: white;
-    align-items: center;
-    li a{
-        color: white;
-        text-decoration: none;
-        list-style: none;
-        padding: 5px;
-        &:hover {
-            color: #ccc;
-        }
-      }
- }
+
 /*Modificaciones index*/
 .fotoFondo {
     background-image: url(../img/proyecto25.jpg);
@@ -137,25 +125,30 @@
   text-shadow: 1px 1px 2px black;
 }
 .slide-in-tl-1 {
+	-webkit-animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+	        animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+.slide-in-tl-2 {
 	-webkit-animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 	        animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 }
-.slide-in-tl-2 {
+.slide-in-tl {
 	-webkit-animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
 	        animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
 }
-.slide-in-tl {
-	-webkit-animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
-	        animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
-}
   .torso label {
-    margin-top: 15px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 10px;
     font-family: $title-b-font;
     color: #5c5c5c;
     font-size: 1.5rem;
     text-shadow: 1px 1px 2px black;
+  }
+  .carteles {
+    display: flex;
+    flex-direction: row;
+    max-width: fit-content;
   }
   .tresColumnas { 
     font-family: $body-font;
@@ -167,20 +160,17 @@
     margin-left: 20px;
     margin-right: 40px;
     padding: 15px;
-    /*@include caja($color-light, $color-dark);*/
     text-align: center;
     background-color: #fff;
     box-shadow: 10px 5px 5px 5px black;
     border: solid #5c5c5c 10px;
   }
 .final {
-    //background-color: #fff;//
   font-family: $title-b-font;
   color: #5c5c5c;
   margin-top: ($tamaño)*3;
   text-shadow: 1px 1px 2px black;
-  display: flex;
-  flex-direction: column;
+  @include columna;
   justify-content: space-between;
   align-items: center;
   margin-left: (($tamaño)*2)+5;
@@ -198,7 +188,7 @@
   padding: 50px; 
   font-family: $title-b-font;
   letter-spacing: 5px;
-  color: #5c5c5c;
+  color: #ccc;
   text-shadow: 1px 1px 2px black;
   h3 {
     text-align: center;
@@ -206,14 +196,13 @@
 }
 .obras {
   padding: 30px;
-  display: flex;
-  flex-direction: row;
+  @include row;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   .foto{
     margin: 5px;
-    border: solid #feffde;
+    border: solid $color-dark;
   }
   img {
     width: 250px;
@@ -222,8 +211,7 @@
 } 
   /*Servicios*/
 .servicios {
-    display: flex;
-    flex-direction: column;
+  @include columna;
 }
 .servicios__titulo {
   padding: 10px;
@@ -239,8 +227,7 @@
 .servicios__metodologia {
     font-family: $body-font;
     margin-top: 30px;
-    display: flex;
-    flex-direction: row;
+    @include row;
     text-align: center;
     justify-content: space-around;
     align-items: center;
@@ -255,15 +242,13 @@
 
 }
 .carrusel {
-  display: flex;
-  flex-direction: column;
+  @include columna;
   align-items: center;
   padding: 10px;
 }
   /*Contacto*/
 .contact {
-  display: flex;
-  flex-direction: column;
+  @include columna;
   align-items: center;
   background-image: url(../img/fondo2.jpg);
   background-size: contain;
@@ -283,11 +268,9 @@
     background-color: #feffde;
     border: solid black 1px;
     box-shadow: $box-shadow;
-  
   }
   .contact__formulario{
-    display: flex;
-    flex-direction: column;
+    @include columna;
     width: 500px;
   }
   .contac__formulario--space {
@@ -301,8 +284,7 @@
   }
    /*----Estudio-----*/  
   .nosotros {
-    display: flex;
-    flex-direction: column;
+    @include columna;
     margin: 50px;
     font-family: $title-b-font;
   }
@@ -320,8 +302,7 @@
       }
       }
   .nosotros__idiologia {
-    display: flex;
-    flex-direction: row;
+    @include row;
     text-align: center;
   }
   .nosotros__idiologia--tipo {
@@ -336,3 +317,283 @@
     border: solid #5c5c5c 10px;
 
   }
+/*Media query*/ 
+@media (max-width: 600px) {
+  .alma {
+    @include columna;
+    }
+  #navbar{
+    @include columna;
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+    }
+    .navbar-collapse {
+      a {
+        @include columna;
+        align-items: center;
+        img {
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .fotoFondo {
+    text-align: center;
+  }
+  .slide-in-tl {
+    animation: none;
+  }
+  .slide-in-tl-1 {
+    animation: none;
+  }
+  .slide-in-tl-2 {
+    animation: none;
+  }
+  .columna {
+    box-shadow: none;
+    }
+  .footer {
+    @include columna;
+    align-items: center;
+    background-color: $color-dark;
+    background-image: none;
+    }
+    .footer-columna {
+      @include columna;
+        h4 {
+            font-size: 1.5rem;
+        }
+        label {
+            font-size: 1rem;
+        }
+        
+        &:hover {
+            color: #ccc;
+        }
+    }
+    .foot {
+      @include columna;
+      justify-content: space-around;
+      align-items: center;
+    }
+    /*Proyectos*/
+    .obras {
+      @include columna;
+        .foto img{
+            width: auto;
+        }
+    }
+    /*Servicios*/
+    .servicios {
+      background-color: $color-wall;
+      @include columna;
+      text-align: center;
+    }
+    .servicios__metodologia {
+      @include columna;
+    }
+    .nosotros {
+        display: flex;
+        flex-direction: column;
+    }
+    .nosotros__idiologia {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px){
+  .alma {
+    display: flex;
+    flex-direction: column;
+  }
+  #navbar{
+      display: flex;
+      flex-direction: column;
+      .navbar-nav {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .navbar-collapse {
+          a {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              img {
+                  margin-left: 0;
+                  margin-top: 10px;
+              }
+          }
+      }
+  }
+  .torso {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .tresColumnas{
+    display: flex;
+    flex-direction: column;
+    background-color: #97b557;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-columna {
+      display: flex;
+      flex-direction: column;
+      h4 {
+          font-size: 1.5rem;
+      }
+      label {
+          font-size: 1rem;
+      }
+      li {
+          font-size: 1rem;
+      }
+      &:hover {
+          color: #ccc;
+      }
+  }
+  .foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .obras {
+      display: flex;
+      flex-direction: column;
+      .foto img{
+          width: 100%;
+      }
+  }
+  .servicios {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+  }
+  .servicios__metodologia {
+      display: flex;
+      flex-direction: column;
+      background-color: #ddffbc;
+  }
+  .carrusel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .carousel-item{
+      width: auto;
+  }
+  .nosotros {
+      display: flex;
+      flex-direction: column;
+  }
+  .nosotros__idiologia {
+      display: flex;
+      flex-direction: column;
+  }
+}
+ @media (max-width: 1050px){
+  .alma {
+      display: flex;
+      flex-direction: column;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        .navbar-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar-collapse {
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .tresColumnas{
+      display: flex;
+      flex-direction: column;
+      background-color: #97b557;
+    }
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-columna {
+        display: flex;
+        flex-direction: column;
+        h4 {
+            font-size: 1.5rem;
+        }
+        label {
+            font-size: 1rem;
+        }
+        li {
+            font-size: 1rem;
+        }
+        &:hover {
+            color: #ccc;
+        }
+    }
+    .foot {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .obras {
+        display: flex;
+        flex-direction: column;
+        .foto img{
+            width: 100%;
+        }
+    }
+    .servicios {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .servicios__metodologia {
+        display: flex;
+        flex-direction: column;
+        background-color: #ddffbc;
+    }
+    .servicio__metodologia--color {
+      width: 100%;
+    }
+    .carrusel {
+        display: none;
+        
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+    .nosotros {
+        display: flex;
+        flex-direction: column;
+    }
+    .nosotros__idiologia {
+        display: flex;
+        flex-direction: column;
+    }
+}
