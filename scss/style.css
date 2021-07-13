@@ -590,7 +590,7 @@
   background-color: #94a366;
 }
 
-#letra {
+#name {
   font-family: "Playfair Display", serif;
   text-shadow: 1px 2px 3px black, 0 0 1em #CCD1D1, 0 0 0.1em #CCD1D1;
   color: #D7DBDD;
@@ -602,12 +602,12 @@
   font-family: "Playfair Display", serif;
   letter-spacing: 2px;
   text-shadow: 1px 2px 3px black, 0 0 1em #CCD1D1, 0 0 0.1em #CCD1D1;
-  color: #E5E8E8;
-  font-size: 25px;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 .letras:hover {
-  color: #ccc;
+  color: #E5E8E8;
 }
 
 #navbar {
@@ -630,9 +630,21 @@
   color: #ccc;
 }
 
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .footer {
   background-color: #5c5c5c;
-  /*background-image: url("../img/fondofooter3.jpg");*/
   padding: 40px;
   background-size: contain;
   background-position: 50% bottom;
@@ -893,7 +905,6 @@
   text-align: center;
   color: #5c5c5c;
   text-shadow: 1px 1px 1px black;
-  /*@include title ($title-b-font);*/
 }
 
 .servicios__metodologia {
@@ -919,8 +930,8 @@
   margin: 25px;
   text-align: center;
   background-color: #fff;
-  -webkit-box-shadow: 5px 3px 3px black;
-          box-shadow: 5px 3px 3px black;
+  -webkit-box-shadow: 5px 3px 3px #000;
+          box-shadow: 5px 3px 3px #000;
   border: solid #5c5c5c 5px;
 }
 
@@ -1052,7 +1063,7 @@
 }
 
 /*Media query*/
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   .alma {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1099,6 +1110,9 @@
   #navbar .navbar-collapse a img {
     margin-left: 0;
     margin-top: 10px;
+  }
+  .class {
+    display: block;
   }
   .fotoFondo {
     text-align: center;

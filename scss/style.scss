@@ -11,7 +11,7 @@
   background-color: $color-wall;
 }
 
-#letra {
+#name {
   font-family: $main-tapeface;
   text-shadow: $text-shadow;
   color: $color-banner;
@@ -23,11 +23,11 @@
   font-family: $main-tapeface;
   letter-spacing: 2px;
   text-shadow: $text-shadow;
-  color: $color-menu;
+  color: #fff;
   &:hover {
-    color: #ccc;
+    color: $color-menu;
   }
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 #navbar {
@@ -48,9 +48,12 @@
     color: #ccc;
   }
 }
+.icons {
+  @include row;
+  justify-content: center;
+}
 .footer {
   background-color: $color-dark;
-  /*background-image: url("../img/fondofooter3.jpg");*/
   padding: ($tamaño)*4;
   background-size: contain;
   background-position: 50% bottom;
@@ -222,7 +225,6 @@
   text-align: center;
   color: #5c5c5c;
   text-shadow: 1px 1px 1px black;
- /*@include title ($title-b-font);*/
 }
 .servicios__metodologia {
     font-family: $body-font;
@@ -237,7 +239,7 @@
   margin: 25px;
   text-align: center;
   background-color: #fff;
-  box-shadow: 5px 3px 3px black;
+  box-shadow: 5px 3px 3px #000;
   border: solid #5c5c5c 5px;
 
 }
@@ -318,7 +320,7 @@
 
   }
 /*Media query*/ 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   .alma {
     @include columna;
     }
@@ -340,6 +342,9 @@
         }
       }
     }
+  }
+  .class {
+    display: block;
   }
   .fotoFondo {
     text-align: center;
