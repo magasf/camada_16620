@@ -261,6 +261,7 @@
     margin-top: 30px;
     @include row;
     text-align: center;
+    background-color: $color-wall;
     justify-content: space-around;
     align-items: center;
 }
@@ -283,7 +284,7 @@
   @include columna;
   align-items: center;
   background-image: url(../img/fondo2.jpg);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   padding-top: 50px; 
   
@@ -303,7 +304,7 @@
   }
   .contact__formulario{
     @include columna;
-    width: 500px;
+    /*width: 500px;*/
   }
   .contac__formulario--space {
     padding: 5px;
@@ -412,7 +413,11 @@
     }
     .foot {
       @include columna;
-      justify-content: space-around;
+      align-items: center;
+    }
+    .torso {
+      display: flex;
+      flex-direction: column;
       align-items: center;
     }
     /*Proyectos*/
@@ -429,6 +434,10 @@
       text-align: center;
     }
     .servicios__metodologia {
+      @include columna;
+      background-color: $color-wall;
+    }
+    .servicio__metodologia--color {
       @include columna;
     }
     .nosotros {
@@ -480,6 +489,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $color-dark;
   }
   .footer-columna {
       display: flex;
@@ -571,6 +581,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      background-color: $color-dark;
     }
     .footer-columna {
         display: flex;
@@ -609,14 +620,12 @@
     .servicios__metodologia {
         display: flex;
         flex-direction: column;
-        background-color: #ddffbc;
     }
     .servicio__metodologia--color {
       width: 100%;
     }
     .carrusel {
-        display: none;
-        
+        display: none;  
     }
     .contact {
         display: flex;

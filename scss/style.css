@@ -974,6 +974,7 @@
       -ms-flex-direction: row;
           flex-direction: row;
   text-align: center;
+  background-color: #94a366;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -1018,7 +1019,7 @@
       -ms-flex-align: center;
           align-items: center;
   background-image: url(../img/fondo2.jpg);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   padding-top: 50px;
 }
@@ -1047,7 +1048,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 500px;
+  /*width: 500px;*/
 }
 
 .contac__formulario--space {
@@ -1229,8 +1230,18 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .torso {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1261,6 +1272,16 @@
     text-align: center;
   }
   .servicios__metodologia {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #94a366;
+  }
+  .servicio__metodologia--color {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1366,6 +1387,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-color: #5c5c5c;
   }
   .footer-columna {
     display: -webkit-box;
@@ -1537,6 +1559,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-color: #5c5c5c;
   }
   .footer-columna {
     display: -webkit-box;
@@ -1603,7 +1626,6 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: #ddffbc;
   }
   .servicio__metodologia--color {
     width: 100%;
