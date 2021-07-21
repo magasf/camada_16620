@@ -672,6 +672,10 @@
   text-align: center;
 }
 
+.footer-columna a:hover {
+  color: #94a366;
+}
+
 .footer-columna-size {
   font-size: 2rem;
 }
@@ -857,32 +861,84 @@
 }
 
 .obras {
-  padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 15px 10px;
+  grid-auto-flow: row;
+      grid-template-areas: "foto1 foto2 foto3 foto4 foto5" "foto6 foto7 foto8 foto9 foto10";
 }
 
-.obras .foto {
-  margin: 5px;
-  border: solid #5c5c5c;
+.foto1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: foto1;
 }
 
-.obras img {
+.foto2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: foto2;
+}
+
+.foto3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: foto3;
+}
+
+.foto4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: foto4;
+}
+
+.foto5 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: foto5;
+}
+
+.foto6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: foto6;
+}
+
+.foto7 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: foto7;
+}
+
+.foto8 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: foto8;
+}
+
+.foto9 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: foto9;
+}
+
+.foto10 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  grid-area: foto10;
+}
+
+.foto img {
   width: 250px;
   height: 250px;
+  border: solid #5c5c5c;
 }
 
 /*Servicios*/

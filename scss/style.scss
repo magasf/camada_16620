@@ -70,6 +70,11 @@
   margin-left: ($tamaño)*2;
   padding: 15px;
   text-align: center;
+  a{
+    &:hover {
+      color: $color-wall;
+    }
+  }
 }
 .footer-columna-size{
   font-size: 2rem;
@@ -139,7 +144,7 @@
 	-webkit-animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
 	        animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
 }
-  .torso label {
+.torso label {
     padding-top: 15px;
     padding-left: 10px;
     padding-bottom: 10px;
@@ -147,19 +152,19 @@
     color: #5c5c5c;
     font-size: 1.5rem;
     text-shadow: 1px 1px 2px black;
-  }
-  .carteles {
+}
+.carteles {
     display: flex;
     flex-direction: row;
     max-width: fit-content;
-  }
-  .tresColumnas { 
+}
+.tresColumnas { 
     font-family: $body-font;
     display: flex;
     flex-direction: row;
     margin-top: 50px;
-  }
-  .columna {
+}
+.columna {
     margin-left: 20px;
     margin-right: 40px;
     padding: 15px;
@@ -167,7 +172,7 @@
     background-color: #fff;
     box-shadow: 10px 5px 5px 5px black;
     border: solid #5c5c5c 10px;
-  }
+}
 .final {
   font-family: $title-b-font;
   color: #5c5c5c;
@@ -198,20 +203,45 @@
   }
 }
 .obras {
-  padding: 30px;
-  @include row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  .foto{
-    margin: 5px;
-    border: solid $color-dark;
-  }
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "foto1 foto2 foto3 foto4 foto5"
+    "foto6 foto7 foto8 foto9 foto10";
+}
+
+.foto1 { grid-area: foto1;}
+
+.foto2 { grid-area: foto2;}
+
+.foto3 { grid-area: foto3;}
+
+.foto4 { grid-area: foto4;}
+
+.foto5 { grid-area: foto5;}
+
+.foto6 { grid-area: foto6;}
+
+.foto7 { grid-area: foto7;}
+
+.foto8 { grid-area: foto8;}
+
+.foto9 { grid-area: foto9;}
+
+.foto10 { grid-area: foto10;}
+
+.foto {
   img {
     width: 250px;
     height: 250px;
+    border: solid $color-dark;
   }
-} 
+}
+
   /*Servicios*/
 .servicios {
   @include columna;
