@@ -1,0 +1,351 @@
+@import "variables";
+@import "responsive";
+@import "mixins";
+@import "keyframes";
+/*Color de fondo general*/
+body {
+  background-color: $color-wall;
+}
+/* Navbar y footer de todas las secciones*/
+/*Navbar*/
+.cabecera {
+  background-color: $color-letter;
+  width: 100%;
+  text-align: center;
+  #name {
+    font-family: $main-tapeface;
+    text-shadow: $text-shadow;
+    color: $color-banner;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  .letras {
+    font-family: $main-tapeface;
+    letter-spacing: 2px;
+    text-shadow: $text-shadow;
+    color: #fff;
+    &:hover {
+      color: $color-menu;
+    }
+    font-size: 1.5rem;
+  }
+  #navbar {
+    background-image: url("../img/fondo2.jpg");
+    background-size: cover;
+    @include columna;
+  }
+  #logo {
+    margin: $tamaño;
+  }
+  .ico{
+    @include ico;
+  }
+  .icons{
+    @include icons;
+  }
+}
+/*Footer*/
+.pies {
+  width: 100%;
+  text-align: center;
+  .footer {
+    background-color: $color-dark;
+    background-image: none;
+    @include columna;
+    padding: ($tamaño)*4;
+    font-family: $main-tapeface;
+    color: $color-menu;
+    font-size: 1.5rem;
+    align-items: center;
+  }
+  .footer-columna {
+    background-color: $color-dark;
+    padding: 15px;
+    text-align: center;
+    color: $color-menu;
+    a{
+        color: $color-menu;
+            &:hover {
+                color: $color-wall;
+            }
+        }
+    }
+    .footer-columna-size{
+        font-size: 2rem;
+    }
+    .fondo{
+        background-color: $color-dark;
+    }
+}
+/*Index*/
+.banner{
+    background-image: url(../img/proyecto25.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 200px;
+    font-size: 2rem;
+    font-family: $title-b-font;
+    padding-bottom: ($tamaño)*2;
+    label{
+        padding: 10px;
+        background-color: #fff;
+        text-align: center;
+        font-size: 2rem;
+        color: #5c5c5c;
+        opacity: 0.4;
+        animation-duration: 2s;
+        animation-name: aparecer;
+    }
+    button{
+        color: #5c5c5c;
+        margin: 10px;
+        margin-left: 50%;
+        opacity: 0.6;
+        &:hover{
+          color: #000;
+          background-color: #fff;
+          opacity: 1;
+        }
+      }
+}
+@keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.9;
+    }
+}
+/*La variable hombros la utilizamos para la seccion de index y servicios*/
+.hombros{
+    max-width: 100%;
+    .title{
+        margin: 10px;
+        text-align: center;
+        letter-spacing: 0.4em;
+        font-family: $title-b-font;
+        color: #5c5c5c;
+        text-shadow: 0.9px 0.9px 1px #000;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+}
+.torso {
+    max-width: 100%;
+    @include row;
+    align-items: center;
+    text-align: center;
+    font-family: $title-b-font;
+    .trescolumnas{
+        margin: 10px;
+        color: $color-letter;
+        font-size: 1rem;
+        .columna{
+            label{
+                font-size: 1.5rem;
+                margin: 5px;
+                color: #5c5c5c;
+                text-shadow: 1px 1px 1px black;
+            }
+            p{
+                margin: 5px;
+                padding-bottom: 10px;
+            }
+            margin: 10px;
+            border: solid #5c5c5c 10px;
+            background-color: #fff;
+        }
+    }   
+}
+.slide-in-tl-1 {
+    -webkit-animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+            animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+    }
+.slide-in-tl-2 {
+    -webkit-animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+            animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+.slide-in-tl {
+    -webkit-animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
+            animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
+}
+.piernas{
+    text-align: center;
+    h2{
+        letter-spacing: 0.4em;
+        font-size: 2.5rem;
+        text-shadow: 0.9px 0.9px 1px #000
+    }
+    font-family: $title-b-font;
+    color: #5c5c5c;
+    @include columna;
+    align-items: center;
+    p{  
+        margin: 10px;
+        padding-bottom: 15px;
+        text-align: center;
+        color: #5c5c5c;  
+
+    } 
+} 
+/*Servicios*/
+.servicios {
+    text-align: center;
+    background-color: $color-menu;
+    padding: 10px;
+    border: $color-wall solid 10px;
+    .servicios__metodologia{
+       @include columna;
+       align-items: center;
+       .servicio__metodologia--color{
+           h3{
+                font-family: $title-b-font;  
+                color: $color-wall;
+           }
+           p{
+                font-family: $body-font;
+                color: $color-dark;
+           }
+       }
+    }
+}
+/*Contacto*/
+.contact {
+    @include columna;
+    align-items: center;
+    padding-top: 50px; 
+    .contact__title{
+        color: #5c5c5c;
+        font-family: $title-b-font;
+        text-shadow: $text-shadow;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .contact__cuadro {
+      color: $color-wall;
+      font-size: 1.2rem;
+      margin: 50px;
+      padding: 20px;
+      background-color: #feffde;
+      border: solid black 1px;
+      box-shadow: $box-shadow;
+    }
+    .contact__formulario{
+      @include columna;
+    }
+    .contac__formulario--space {
+      padding: 15px;
+      margin: 10px;
+      text-align: center;
+      resize: none;
+    }
+    .contact__formulario--position{
+      font-family: $title-b-font;
+      padding: 10px;
+      
+    }
+    .contact__formulario--boton{
+        @include row;
+        
+    }
+}
+/*Proyectos*/
+.frase {
+    font-family: $title-b-font;
+    padding: 50px; 
+    font-family: $title-b-font;
+    letter-spacing: 5px;
+    color: #ccc;
+    text-shadow: 1px 1px 2px black;
+    h3 {
+      text-align: center;
+    }
+    }
+.obras {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-template-rows: 1fr;
+    gap: 15px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "foto1" 
+      "foto2"
+      "foto3" 
+      "foto4" 
+      "foto5" 
+      "foto6"
+      "foto7" 
+      "foto8" 
+      "foto9" 
+      "foto10";
+}
+    
+.foto1 { grid-area: foto1;}
+    
+.foto2 { grid-area: foto2;}
+    
+.foto3 { grid-area: foto3;}
+    
+.foto4 { grid-area: foto4;}
+    
+.foto5 { grid-area: foto5;}
+    
+.foto6 { grid-area: foto6;}
+    
+.foto7 { grid-area: foto7;}
+    
+.foto8 { grid-area: foto8;}
+    
+.foto9 { grid-area: foto9;}
+    
+.foto10 { grid-area: foto10;}
+    
+.foto {
+    img {
+      width: 100%;
+      height: 100%;
+      border: solid $color-dark;
+    }
+}
+    /*Estudio*/
+.nosotros {
+    @include columna;
+    font-family: $title-b-font;
+    .nosotros__main {
+        margin: 15px;
+        padding: 5px;
+        h2 {
+             @include title;
+        }
+        p {
+            color: #5c5c5c;
+            font-size: 1rem;
+            font-family: $title-b-font;
+            text-align: justify;
+        }
+    }
+    .nosotros__idiologia {
+        @include columna;
+        text-align: center;
+    }
+    .nosotros__idiologia--tipo {
+        border: solid #feffde 5px;
+        margin: 20px;
+        padding: 10px;
+        background-color: #ddffbc;
+        font-family: $body-font;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 10px 5px 5px 5px black;
+        border: solid #5c5c5c 10px; 
+    }
+}
