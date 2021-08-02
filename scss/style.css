@@ -76,23 +76,59 @@
 /*Media query*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  /*max-width: 500px;*/
-  body {
-    max-width: 100%;
+  .cabecera #name {
+    font-size: 1.5rem;
+    padding-left: 2px;
   }
+  .cabecera .letras {
+    font-size: 1.2rem;
+  }
+  .piernas {
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    color: #5c5c5c;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .piernas h2 {
+    letter-spacing: 0.4em;
+    font-size: 1.5rem;
+    text-shadow: 0.9px 0.9px 1px #000;
+  }
+  .piernas p {
+    margin: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: #5c5c5c;
+  }
+  .pies .footer .footer-columna label {
+    font-size: 1.2rem;
+  }
+  /*max-width: 500px;*/
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .cabecera {
+    border-bottom: #5c5c5c;
+  }
+  .cabecera #navbar {
+    background-image: url("../img/fondo19.jpg");
+    background-size: cover;
+  }
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-  .cabecera #name {
-    font-family: "Playfair Display", serif;
-    text-shadow: 1px 2px 3px black, 0 0 1em #CCD1D1, 0 0 0.1em #CCD1D1;
-    color: #D7DBDD;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-  }
   .cabecera .letras {
     font-family: "Playfair Display", serif;
     letter-spacing: 2px;
@@ -120,7 +156,6 @@
     color: #ccc;
   }
   .cabecera .icons {
-    /*@include row;*/
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -443,17 +478,15 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-image: url(../img/fondo2.jpg);
-    background-size: contain;
     background-position: center;
     padding-top: 50px;
   }
-  .contact__title {
+  .contact .contact__title {
     color: #fff;
     font-family: "Libre Baskerville", serif;
     text-shadow: 1px 2px 3px black, 0 0 1em #CCD1D1, 0 0 0.1em #CCD1D1;
   }
-  .contact__cuadro {
+  .contact .contact__cuadro {
     color: #5c5c5c;
     margin: 50px;
     padding: 20px;
@@ -462,7 +495,7 @@
     -webkit-box-shadow: 10px 5px 5px black;
             box-shadow: 10px 5px 5px black;
   }
-  .contact__formulario {
+  .contact .contact__formulario {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -472,11 +505,11 @@
             flex-direction: column;
     width: 500px;
   }
-  .contac__formulario--space {
+  .contact .contact__formulario .contac__formulario--space {
     padding: 5px;
     margin: 5px;
   }
-  .contact__formulario--position {
+  .contact .contact__formulario .contact__formulario--position {
     font-family: "Libre Baskerville", serif;
     margin: 5px;
     padding: 5px;
@@ -493,24 +526,23 @@
     margin: 50px;
     font-family: "Libre Baskerville", serif;
   }
-  .nosotros__main {
-    /*background-color: #feffde;*/
+  .nosotros .nosotros__main {
     padding: 5px;
   }
-  .nosotros__main h2 {
+  .nosotros .nosotros__main h2 {
     font-family: "Libre Baskerville", serif;
     font-size: 2.5rem;
     text-align: center;
     color: #5c5c5c;
     text-shadow: 1px 1px 1px black;
   }
-  .nosotros__main p {
+  .nosotros .nosotros__main p {
     color: #5c5c5c;
     font-size: 1rem;
     font-family: "Libre Baskerville", serif;
-    text-align: justify;
+    text-align: center;
   }
-  .nosotros__idiologia {
+  .nosotros .nosotros__idiologia {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -520,7 +552,7 @@
             flex-direction: row;
     text-align: center;
   }
-  .nosotros__idiologia--tipo {
+  .nosotros .nosotros__idiologia .nosotros__idiologia--tipo {
     border: solid #feffde 5px;
     margin: 20px;
     padding: 10px;
@@ -712,7 +744,7 @@ body {
   }
 }
 
-/*La variable hombros la utilizamos para la seccion de index y servicios*/
+/*La class hombros la utilizamos para la seccion de index y servicios*/
 .hombros {
   max-width: 100%;
 }
@@ -1110,23 +1142,59 @@ body {
 /*Media query*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  /*max-width: 500px;*/
-  body {
-    max-width: 100%;
+  .cabecera #name {
+    font-size: 1.5rem;
+    padding-left: 2px;
   }
+  .cabecera .letras {
+    font-size: 1.2rem;
+  }
+  .piernas {
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    color: #5c5c5c;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .piernas h2 {
+    letter-spacing: 0.4em;
+    font-size: 1.5rem;
+    text-shadow: 0.9px 0.9px 1px #000;
+  }
+  .piernas p {
+    margin: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    color: #5c5c5c;
+  }
+  .pies .footer .footer-columna label {
+    font-size: 1.2rem;
+  }
+  /*max-width: 500px;*/
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .cabecera {
+    border-bottom: #5c5c5c;
+  }
+  .cabecera #navbar {
+    background-image: url("../img/fondo19.jpg");
+    background-size: cover;
+  }
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-  .cabecera #name {
-    font-family: "Playfair Display", serif;
-    text-shadow: 1px 2px 3px black, 0 0 1em #CCD1D1, 0 0 0.1em #CCD1D1;
-    color: #D7DBDD;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-  }
   .cabecera .letras {
     font-family: "Playfair Display", serif;
     letter-spacing: 2px;
@@ -1154,7 +1222,6 @@ body {
     color: #ccc;
   }
   .cabecera .icons {
-    /*@include row;*/
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1477,17 +1544,15 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-image: url(../img/fondo2.jpg);
-    background-size: contain;
     background-position: center;
     padding-top: 50px;
   }
-  .contact__title {
+  .contact .contact__title {
     color: #fff;
     font-family: "Libre Baskerville", serif;
     text-shadow: 1px 2px 3px black, 0 0 1em #CCD1D1, 0 0 0.1em #CCD1D1;
   }
-  .contact__cuadro {
+  .contact .contact__cuadro {
     color: #5c5c5c;
     margin: 50px;
     padding: 20px;
@@ -1496,7 +1561,7 @@ body {
     -webkit-box-shadow: 10px 5px 5px black;
             box-shadow: 10px 5px 5px black;
   }
-  .contact__formulario {
+  .contact .contact__formulario {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1506,11 +1571,11 @@ body {
             flex-direction: column;
     width: 500px;
   }
-  .contac__formulario--space {
+  .contact .contact__formulario .contac__formulario--space {
     padding: 5px;
     margin: 5px;
   }
-  .contact__formulario--position {
+  .contact .contact__formulario .contact__formulario--position {
     font-family: "Libre Baskerville", serif;
     margin: 5px;
     padding: 5px;
@@ -1527,24 +1592,23 @@ body {
     margin: 50px;
     font-family: "Libre Baskerville", serif;
   }
-  .nosotros__main {
-    /*background-color: #feffde;*/
+  .nosotros .nosotros__main {
     padding: 5px;
   }
-  .nosotros__main h2 {
+  .nosotros .nosotros__main h2 {
     font-family: "Libre Baskerville", serif;
     font-size: 2.5rem;
     text-align: center;
     color: #5c5c5c;
     text-shadow: 1px 1px 1px black;
   }
-  .nosotros__main p {
+  .nosotros .nosotros__main p {
     color: #5c5c5c;
     font-size: 1rem;
     font-family: "Libre Baskerville", serif;
-    text-align: justify;
+    text-align: center;
   }
-  .nosotros__idiologia {
+  .nosotros .nosotros__idiologia {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1554,7 +1618,7 @@ body {
             flex-direction: row;
     text-align: center;
   }
-  .nosotros__idiologia--tipo {
+  .nosotros .nosotros__idiologia .nosotros__idiologia--tipo {
     border: solid #feffde 5px;
     margin: 20px;
     padding: 10px;

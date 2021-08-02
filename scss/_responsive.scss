@@ -5,28 +5,60 @@
 
  /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    /*max-width: 500px;*/
-    body{
-        max-width: 100%;
+  .cabecera{
+    #name{
+      font-size: 1.5rem;
+      padding-left: 2px;
     }
+    .letras{
+      font-size: 1.2rem;
+    }
+  }
+  .piernas{
+    text-align: center;
+    h2{
+        letter-spacing: 0.4em;
+        font-size: 1.5rem;
+        text-shadow: 0.9px 0.9px 1px #000
+    }
+    font-family: $title-b-font;
+    color: #5c5c5c;
+    @include columna;
+    align-items: center;
+    p{  
+        margin: 10px;
+        padding-bottom: 15px;
+        text-align: center;
+        color: #5c5c5c;  
+    } 
+  } 
+  .pies .footer .footer-columna{
+    label{
+      font-size: 1.2rem;
+    }
+  }
+  /*max-width: 500px;*/
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+  
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+  .cabecera{
+    border-bottom: #5c5c5c; 
+    #navbar {
+      background-image: url("../img/fondo19.jpg");
+      background-size: cover;
+    }
+  }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-  .cabecera{
-    #name {
-      font-family: $main-tapeface;
-      text-shadow: $text-shadow;
-      color: $color-banner;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-    } 
+  .cabecera{ 
     .letras {
       font-family: $main-tapeface;
       letter-spacing: 2px;
@@ -54,7 +86,6 @@
       }
     }
     .icons {
-      /*@include row;*/
       justify-content: center;
     }
   }
@@ -269,14 +300,12 @@
   }
     /*Contacto*/
   .contact {
-        @include columna;
+    @include columna;
         align-items: center;
-        background-image: url(../img/fondo2.jpg);
-        background-size: contain;
+       
         background-position: center;
         padding-top: 50px; 
         
-      }
         .contact__title{
           color: #fff;
           font-family: $title-b-font;
@@ -293,49 +322,48 @@
         .contact__formulario{
           @include columna;
           width: 500px;
-        }
-        .contac__formulario--space {
-          padding: 5px;
-          margin: 5px;
-        }
-        .contact__formulario--position{
-          font-family: $title-b-font;
-          margin: 5px;
-          padding: 5px;
-        }
-         /*----Estudio-----*/  
-        .nosotros {
-          @include columna;
-          margin: 50px;
-          font-family: $title-b-font;
-        }
-        .nosotros__main {
-           /*background-color: #feffde;*/
+          .contac__formulario--space {
             padding: 5px;
-            h2 {
-              @include title;
-            }
-            p {
-              color: #5c5c5c;
-              font-size: 1rem;
-              font-family: $title-b-font;
-              text-align: justify;
-            }
-            }
-        .nosotros__idiologia {
-          @include row;
-          text-align: center;
+            margin: 5px;
+          }
+          .contact__formulario--position{
+            font-family: $title-b-font;
+            margin: 5px;
+            padding: 5px;
+          }
         }
-        .nosotros__idiologia--tipo {
-          border: solid #feffde 5px;
-          margin: 20px;
-          padding: 10px;
-          background-color: #ddffbc;
-          font-family: $body-font;
-          text-align: center;
-          background-color: #fff;
-          box-shadow: 10px 5px 5px 5px black;
-          border: solid #5c5c5c 10px;
-      
-        }
+      }
+      /*----Estudio-----*/  
+  .nosotros {
+    @include columna;
+    margin: 50px;
+    font-family: $title-b-font;
+    .nosotros__main {
+      padding: 5px;
+      h2 {
+        @include title;
+      }
+      p {
+        color: #5c5c5c;
+        font-size: 1rem;
+        font-family: $title-b-font;
+        text-align: center;
+      }
+    }
+    .nosotros__idiologia {
+      @include row;
+      text-align: center;
+      .nosotros__idiologia--tipo {
+        border: solid #feffde 5px;
+        margin: 20px;
+        padding: 10px;
+        background-color: #ddffbc;
+        font-family: $body-font;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 10px 5px 5px 5px black;
+        border: solid #5c5c5c 10px;
+      }
+    }
+  }
 } 
