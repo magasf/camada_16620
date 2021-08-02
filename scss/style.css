@@ -110,9 +110,25 @@
     color: #5c5c5c;
   }
   .pies .footer .footer-columna label {
+    font-size: 1rem;
+  }
+  /*index*/
+  .banner .boton button {
+    font-size: 1rem;
+  }
+  .hombros .codo .title h2 {
+    font-size: 1.5rem;
+  }
+  /*Servicios*/
+  .hombros .brazo .title h2 {
     font-size: 1.2rem;
   }
-  /*max-width: 500px;*/
+  .servicios .servicios__metodologia .servicio__metodologia--color h3 {
+    font-size: 1.1rem;
+  }
+  .servicios .servicios__metodologia .servicio__metodologia--color p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -1176,9 +1192,25 @@ body {
     color: #5c5c5c;
   }
   .pies .footer .footer-columna label {
+    font-size: 1rem;
+  }
+  /*index*/
+  .banner .boton button {
+    font-size: 1rem;
+  }
+  .hombros .codo .title h2 {
+    font-size: 1.5rem;
+  }
+  /*Servicios*/
+  .hombros .brazo .title h2 {
     font-size: 1.2rem;
   }
-  /*max-width: 500px;*/
+  .servicios .servicios__metodologia .servicio__metodologia--color h3 {
+    font-size: 1.1rem;
+  }
+  .servicios .servicios__metodologia .servicio__metodologia--color p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
