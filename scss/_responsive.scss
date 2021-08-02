@@ -18,191 +18,195 @@
 @media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
+  .cabecera{
     #name {
-        font-family: $main-tapeface;
-        text-shadow: $text-shadow;
-        color: $color-banner;
-        font-size: 2.5rem;
-        letter-spacing: 2px;
+      font-family: $main-tapeface;
+      text-shadow: $text-shadow;
+      color: $color-banner;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    } 
+    .letras {
+      font-family: $main-tapeface;
+      letter-spacing: 2px;
+      text-shadow: $text-shadow;
+      color: #fff;
+      &:hover {
+        color: $color-menu;
       }
-      
-      .letras {
-        font-family: $main-tapeface;
-        letter-spacing: 2px;
-        text-shadow: $text-shadow;
-        color: #fff;
-        &:hover {
-          color: $color-menu;
-        }
-        font-size: 1.5rem;
-      }
-      
-      #navbar {
-        background-image: url("../img/fondo.jpg");
-        background-size: contain;
-      }
-      
-      #logo {
-        margin: $tamaño;
-        margin-left: ($tamaño)*4;
-      }
-      
-      .ico {
+      font-size: 1.5rem;
+    }
+    #navbar {
+      background-image: url("../img/fondo.jpg");
+      background-size: contain;
+    }  
+    #logo {
+      margin: $tamaño;
+      margin-left: ($tamaño)*4;
+    }  
+    .ico {
+      color: #ccc;
+      padding: 5px;
+      margin: 5px;
+      &:hover {
         color: #ccc;
-        padding: 5px;
-        margin: 5px;
+      }
+    }
+    .icons {
+      /*@include row;*/
+      justify-content: center;
+    }
+  }
+  .pies .footer{
+    display: flex;
+    flex-direction: row;
+  }
+  .footer {
+    background-color: $color-dark;
+    padding: ($tamaño)*4;
+    background-size: contain;
+    background-position: 50% bottom;
+    color: #fff;
+    @include row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: $main-tapeface;
+    border-top: $color-dark solid;
+    .footer-columna {
+      margin-left: ($tamaño)*2;
+      padding: 15px;
+      text-align: center;
+      a{
         &:hover {
-          color: #ccc;
+          color: $color-wall;
         }
       }
-      .icons {
-        /*@include row;*/
-        justify-content: center;
-      }
-      .footer {
-        background-color: $color-dark;
-        padding: ($tamaño)*4;
-        background-size: contain;
-        background-position: 50% bottom;
-        color: #fff;
-        @include row;
-        justify-content: space-around;
-        align-items: center;
-        font-size: 1.5rem;
-        font-family: $main-tapeface;
-        border-top: $color-dark solid;
-      }
-      
-      .footer-columna {
-        margin-left: ($tamaño)*2;
-        padding: 15px;
-        text-align: center;
-        a{
-          &:hover {
-            color: $color-wall;
-          }
-        }
-      }
-      .footer-columna-size{
-        font-size: 2rem;
-      }
-      
+    }
+    .footer-columna-size{
+      font-size: 2rem;
+    }
+  } 
       /*Modificaciones index*/
-      .fotoFondo {
-          background-image: url(../img/proyecto25.jpg);
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-          width: auto;
-          display: block;
-          font-size: 2rem;
+  .fotoFondo {
+    background-image: url(../img/proyecto25.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    display: block;
+    font-size: 2rem;
+    font-family: $title-b-font;
+    padding-top: 500px;
+    padding-bottom: ($tamaño)*2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    label{
+          margin-top: 200px;
+          margin-bottom: ($tamaño)*5;
+          padding: 10px;
           font-family: $title-b-font;
-          padding-top: 500px;
-          padding-bottom: ($tamaño)*2;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          label{
-              margin-top: 200px;
-              margin-bottom: ($tamaño)*5;
-              padding: 10px;
-              font-family: $title-b-font;
-              font-size: 3rem;
-              color: #5c5c5c;
-              background-color: #fff;
-              opacity: 0.6;
-              animation-duration: 2s;
-              animation-name: aparecer;
-          }
-          button{
-            color: #5c5c5c;
-            opacity: 0.6;
-            &:hover{
-              color: #000;
-              background-color: #fff;
-              opacity: 1;
-            }
-          }
-        }
-        @keyframes aparecer {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-       }
-      .title{
-        margin: 20px;
-        text-align: center;
-        font-family: $title-b-font;
-        color: #5c5c5c;
-        text-shadow: 1px 1px 2px black;
+          font-size: 3rem;
+          color: #5c5c5c;
+          background-color: #fff;
+          opacity: 0.6;
+          animation-duration: 2s;
+          animation-name: aparecer;
+    }
+    button{
+      color: #5c5c5c;
+      opacity: 0.6;
+      &:hover{
+        color: #000;
+        background-color: #fff;
+        opacity: 1;
       }
-      .slide-in-tl-1 {
+    }
+  }
+  @keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .hombros .title{
+    margin: 20px;
+  }
+  .title{
+    margin: 20px;
+    text-align: center;
+    font-family: $title-b-font;
+    color: #5c5c5c;
+    text-shadow: 1px 1px 2px black;
+  }
+  .slide-in-tl-1 {
           -webkit-animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
                   animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
-      }
-      .slide-in-tl-2 {
+  }
+  .slide-in-tl-2 {
           -webkit-animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
                   animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-      }
-      .slide-in-tl {
+  }
+  .slide-in-tl {
           -webkit-animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
                   animation: slide-in-tl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s both;
-      }
-      .torso label {
-          padding-top: 15px;
-          padding-left: 10px;
-          padding-bottom: 10px;
-          font-family: $title-b-font;
-          color: #5c5c5c;
-          font-size: 1.5rem;
-          text-shadow: 1px 1px 2px black;
-      }
-      .carteles {
-          display: flex;
-          flex-direction: row;
-          max-width: fit-content;
-      }
-      .tresColumnas { 
-          font-family: $body-font;
-          display: flex;
-          flex-direction: row;
-          margin-top: 50px;
-      }
-      .columna {
-          margin-left: 20px;
-          margin-right: 40px;
-          padding: 15px;
-          text-align: center;
-          background-color: #fff;
-          box-shadow: 10px 5px 5px 5px black;
-          border: solid #5c5c5c 10px;
-      }
-      .final {
-        font-family: $title-b-font;
+  }
+  .torso .trescolumnas{
+    display: flex;
+    flex-direction: row;
+  }
+  .torso{
+    display: flex;
+    flex-direction: row;
+    label {
+      padding-top: 15px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      font-family: $title-b-font;
+      color: #5c5c5c;
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 2px black;
+    }
+    .trescolumnas { 
+              font-family: $body-font;
+              display: flex;
+              flex-direction: row;
+              margin-top: 50px;
+              .columna {
+                  margin-left: 20px;
+                  margin-right: 40px;
+                  padding: 15px;
+                  text-align: center;
+                  background-color: #fff;
+                  box-shadow: 10px 5px 5px 5px black;
+                  border: solid #5c5c5c 10px;
+              }
+          }
+
+  }
+  .final {
+      font-family: $title-b-font;
+      color: #5c5c5c;
+      margin-top: ($tamaño)*3;
+      text-shadow: 1px 1px 2px black;
+      @include columna;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: (($tamaño)*2)+5;
+      margin-right: (($tamaño)*2)+5;
+      margin-bottom: (($tamaño)*2)+5;
+      p{
+        text-shadow: none;
+        text-align: center;
         color: #5c5c5c;
-        margin-top: ($tamaño)*3;
-        text-shadow: 1px 1px 2px black;
-        @include columna;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: (($tamaño)*2)+5;
-        margin-right: (($tamaño)*2)+5;
-        margin-bottom: (($tamaño)*2)+5;
-        p{
-          text-shadow: none;
-          text-align: center;
-          color: #5c5c5c;
-        }
       }
+  }
       /*proyect*/
-      .frase {
+  .frase {
         font-family: $title-b-font;
         padding: 50px; 
         font-family: $title-b-font;
@@ -212,8 +216,8 @@
         h3 {
           text-align: center;
         }
-      }
-      .obras {
+  }
+  .obras {
         display: grid;
         justify-content: center;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -223,74 +227,48 @@
         grid-template-areas:
           "foto1 foto2 foto3 foto4 foto5"
           "foto6 foto7 foto8 foto9 foto10";
-      }
+  }    
+  .foto1 { grid-area: foto1;}
       
-      .foto1 { grid-area: foto1;}
+  .foto2 { grid-area: foto2;}
       
-      .foto2 { grid-area: foto2;}
+  .foto3 { grid-area: foto3;}
       
-      .foto3 { grid-area: foto3;}
+  .foto4 { grid-area: foto4;}
       
-      .foto4 { grid-area: foto4;}
+  .foto5 { grid-area: foto5;}
       
-      .foto5 { grid-area: foto5;}
+  .foto6 { grid-area: foto6;}
       
-      .foto6 { grid-area: foto6;}
+  .foto7 { grid-area: foto7;}
       
-      .foto7 { grid-area: foto7;}
+  .foto8 { grid-area: foto8;}
       
-      .foto8 { grid-area: foto8;}
+  .foto9 { grid-area: foto9;}
       
-      .foto9 { grid-area: foto9;}
+  .foto10 { grid-area: foto10;}
       
-      .foto10 { grid-area: foto10;}
-      
-      .foto {
+  .foto {
         img {
-          width: 250px;
-          height: 250px;
+          width: 100%;
+          height: 100%;
           border: solid $color-dark;
         }
-      }
+  }
       
         /*Servicios*/
-      .servicios {
-        @include columna;
-      }
-      .servicios__titulo {
-        padding: 10px;
-        margin-left: 25px;
-        margin-top: 50px;
-        font-family: $title-b-font;
-        font-size: 2.5rem;
-        text-align: center;
-        color: #5c5c5c;
-        text-shadow: 1px 1px 1px black;
-      }
-      .servicios__metodologia {
-          font-family: $body-font;
-          margin-top: 30px;
-          @include row;
-          text-align: center;
-          justify-content: space-around;
-          align-items: center;
-      }
-      .servicio__metodologia--color {
-        padding: 10px;
-        margin: 25px;
-        text-align: center;
-        background-color: #fff;
-        box-shadow: 5px 3px 3px #000;
-        border: solid #5c5c5c 5px;
-      
-      }
-      .carrusel {
-        @include columna;
-        align-items: center;
-        padding: 10px;
-      }
-        /*Contacto*/
-      .contact {
+ .brazo .servicios .servicios__metodologia{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+  }
+  .carrusel {
+    @include columna;
+    align-items: center;
+    padding: 10px;
+  }
+    /*Contacto*/
+  .contact {
         @include columna;
         align-items: center;
         background-image: url(../img/fondo2.jpg);
