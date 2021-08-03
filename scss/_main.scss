@@ -220,12 +220,22 @@ body {
     }
     .contact__formulario{
       @include columna;
+      color: $color-wall;
     }
     .contac__formulario--space {
       padding: 15px;
       margin: 10px;
       text-align: center;
       resize: none;
+      color: $color-wall;
+      a{
+        outline: none;
+        color: $color-wall;
+        text-decoration: none;
+      }
+      &:hover {
+        background-color: $color-menu;
+      }
     }
     .contact__formulario--position{
       font-family: $title-b-font;

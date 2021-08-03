@@ -908,6 +908,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #94a366;
 }
 
 .contact .contac__formulario--space {
@@ -915,6 +916,17 @@ body {
   margin: 10px;
   text-align: center;
   resize: none;
+  color: #94a366;
+}
+
+.contact .contac__formulario--space a {
+  outline: none;
+  color: #94a366;
+  text-decoration: none;
+}
+
+.contact .contac__formulario--space:hover {
+  background-color: #E5E8E8;
 }
 
 .contact .contact__formulario--position {
